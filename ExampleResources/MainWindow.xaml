@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:ExampleResources"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Window.Resources>
+        <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="emoji.png" Opacity="0.3"/>
+    </Window.Resources>
+    <StackPanel Margin="10">
+        <TextBlock>Colección de Recursos</TextBlock>
+        <Button Background="{StaticResource TileBrush}" FontSize="14" Height="30" Width="300">A Tiled Button</Button>
+        <Button Background="{StaticResource TileBrush}">A Tiled Button 2</Button>
+    </StackPanel>
 </Window>
