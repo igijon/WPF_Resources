@@ -13,5 +13,28 @@
         <TextBlock>Colección de Recursos</TextBlock>
         <Button Background="{StaticResource TileBrush}" FontSize="14" Height="30" Width="300">A Tiled Button</Button>
         <Button Background="{StaticResource TileBrush}">A Tiled Button 2</Button>
+        <Separator Margin="20"/>
+        <TextBlock>Jerarquía de recursos</TextBlock>
+        <StackPanel>
+            <StackPanel.Resources>
+                <ImageBrush x:Key="MyBrush2" TileMode="None" ImageSource="emoji.png"/>
+            </StackPanel.Resources>
+            <Button Background="{StaticResource MyBrush2}" Height="30" Width="30"></Button>
+            <Button Background="{StaticResource MyBrush2}" Height="30" Width="30"></Button>
+        </StackPanel>
+        <Button Height="30" Width="30">
+            <Button.Resources>
+                <ImageBrush x:Key="MyBrush2" TileMode="None" ImageSource="emoji.png"/>
+            </Button.Resources>
+            <Button.Background>
+                <StaticResource ResourceKey="MyBrush2"/>
+            </Button.Background>
+        </Button>
+        <Button Height="30" Width="30" Background="{DynamicResource TileBrush}">
+            <!--Va a usar el recurso que primero encuentre cuando es dinámico, es decir, el del botón-->
+            <Button.Resources>
+                <ImageBrush x:Key="MyBrush2" TileMode="None" ImageSource="emoji.png"/>
+            </Button.Resources>
+        </Button>
     </StackPanel>
 </Window>
