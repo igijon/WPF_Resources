@@ -19,6 +19,13 @@ namespace ExampleResources
         public MainWindow()
         {
             InitializeComponent();
+            ImageBrush brush = (ImageBrush)this.Resources["TileBrush"];
+            brush.Viewport = new Rect(0,0,5,5);
+        }
+
+        private void btnChangeResource_Click(object sender, RoutedEventArgs e)
+        {
+            this.Resources["TileBrush"] = new SolidColorBrush(Colors.LightBlue);
         }
     }
 }
