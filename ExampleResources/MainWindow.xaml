@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExampleResources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Window.Resources>
         <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="emoji.png" Opacity="0.3"/>
     </Window.Resources>
@@ -40,5 +40,9 @@
         <TextBlock>Recursos dinámicos y estáticos</TextBlock>
         <Button x:Name="btnChangeResource" Click="btnChangeResource_Click">Cambia Mosaico</Button>
         <Button Background="{DynamicResource TileBrush}">A Tiled Button 2</Button>
+
+        <Separator Margin="20"/>
+        <TextBlock>Recursos de aplicación y de sistema</TextBlock>
+        <Button x:Name="btnOpenWindow2" Click="btnOpenWindow2_Click">Abre segunda ventana</Button>
     </StackPanel>
 </Window>

@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ExampleResources"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="emoji.png" Opacity="0.3"/>
     </Application.Resources>
 </Application>

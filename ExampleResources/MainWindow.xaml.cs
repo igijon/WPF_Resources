@@ -27,5 +27,11 @@ namespace ExampleResources
         {
             this.Resources["TileBrush"] = new SolidColorBrush(Colors.LightBlue);
         }
+
+        private void btnOpenWindow2_Click(object sender, RoutedEventArgs e)
+        {
+            Second otherWindow = new Second();
+            otherWindow.Show();
+        }
     }
 }
